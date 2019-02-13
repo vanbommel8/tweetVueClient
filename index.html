@@ -47,7 +47,7 @@
           <input v-model="author" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="author">
         </div>
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-2" v-on:click="getTweetsByAuthor">show tweets by author</button>
+          <button type="button" class="btn btn-primary mb-2" v-on:click="getTweetsByAuthor">show tweets by author</button>
         </div>
       </div>
     </form>
@@ -60,7 +60,7 @@
               <input v-model="idTweets" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="id">
             </div>
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-2" v-on:click="TweetsById">show tweets by id</button>
+              <button type="button" class="btn btn-primary mb-2" v-on:click="TweetsById">show tweets by id</button>
             </div>
           </div>
         </form>
@@ -73,7 +73,7 @@
           <input v-model="idTweets" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="write id number">
         </div>
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-2" v-on:click="deleteTweetsById">delete tweets by id</button>
+          <button type="button" class="btn btn-primary mb-2" v-on:click="deleteTweetsById">delete tweets by id</button>
         </div>
       </div>
     </form>
@@ -86,14 +86,14 @@
                 <input v-model="message" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="write a word">
               </div>
               <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2" v-on:click="getTweetsByWord">Search tweets from word</button>
+                <button type="button" class="btn btn-primary mb-2" v-on:click="getTweetsByWord">Search tweets from word</button>
               </div>
             </div>
           </form>
 
 
 
-      <button type="submit" class="btn btn-primary mb-2" v-on:click="getTweets">SHOW ALL TWEETS</button>
+      <button type="button" class="btn btn-primary mb-2" v-on:click="getTweets">SHOW ALL TWEETS</button>
     <br>
     <br>
     <br>

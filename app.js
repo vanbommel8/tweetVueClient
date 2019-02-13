@@ -45,26 +45,29 @@ var vue = new Vue({
         getTweetsByWord: function() {
             var url = 'https://fake-tweets-api.herokuapp.com/tweets?word=' + this.message;
             this.$http.get(url).then(response => {
-                this.message = response.body;
+                this.tweets = response.body;
                 return this.message;
             });
         },
 
 
         TweetsById: function() {
-            var url = 'https://fake-tweets-api.herokuapp.com/tweets' + this.idTweets;
+            console.log('this.idTweets:', this.idTweets);
+            var url = 'https://fake-tweets-api.herokuapp.com/tweets/' + this.idTweets;
             this.$http.get(url).then(response => {
-                this.tweet=response.body
+                this.tweets = [];
+                this.tweets.push(response.body);
+                console.log('this.tweet:', this.tweets);
+                return this.tweets;
             })
             .catch(error => { console.log("Error!") })
         },
 
 
         deleteTweetsById: function() {
-            var url = 'https://fake-tweets-api.herokuapp.com/tweets' + this.idTweets;
+            var url = 'https://fake-tweets-api.herokuapp.com/tweets/' + this.idTweets;
             this.$http.delete(url).then(response => {
-                this.tweets = response.body;
-                return this.tweets;
+                this.getTweets();
             })
         }
     },
